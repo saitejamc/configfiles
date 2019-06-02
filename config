@@ -1,0 +1,20 @@
+# ~/.ssh/config
+
+Host vagrant*
+  Port 22
+  User vagrant
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  IdentityFile ~/.ssh/id_rsa
+
+Host localhost
+  Port 2222
+
+Host *
+  Port 22
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  IdentityFile ~/.ssh/id_rsa
+  ControlMaster auto
+  ControlPath ~/.ssh/private/ssh-%r@%h:%p
+  ControlPersist 4h
