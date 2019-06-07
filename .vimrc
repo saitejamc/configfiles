@@ -15,3 +15,5 @@ set path+=**
 set wildmenu
 
 imap jj <Esc>
+
+set ts=2 sw=2
